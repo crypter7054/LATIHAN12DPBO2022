@@ -11,4 +11,9 @@ Saya Yosafat (2009929) mengerjakan evaluasi LATIHAN 12 dalam mata kuliah Desain 
 ## Soal
 Setelah kalian berhasil mengakses programnya, buatlah fitur CRUD untuk tabel yang sudah disediakan, dan tampilkan 2 kolom baru yaitu kolom email dan telepon yang sudah ada pada database.
 
-## Demonstrasi
+## Demonstrasi CRUD
+### CREATE/ADD
+
+### UPDATE
+
+### DELETE
