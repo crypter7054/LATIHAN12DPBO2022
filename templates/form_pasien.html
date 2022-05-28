@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Pasien</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="flex flex-row bg-slate-700 py-3 items-center">
+        <h1 class="mx-6 text-xl text-white">WIW</h1>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- MAIN SECTION -->
+    <div class="flex flex-col w-9/12 mx-auto my-6 items-center border rounded-lg">
+
+        <!-- FORM -->
+        <form action="DATA_FORM_ACTION" method="POST" class="pt-4 pb-12 w-9/12" enctype="multipart/form-data">
+            <h1 class="text-2xl font-medium text-center py-8">Tambah Pasien</h1>
+            
+            <div class="flex flex-row space-x-6">
+                <!-- NAMA -->
+                <label for="tnama" class="block mt-4 w-full">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> Nama </span>
+                    <input name="tnama" type="text" value="DATA_NAMA" id="tnama" placeholder="Nama" required class="mt-3 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-slate-500 block w-full rounded-md text-sm focus:ring-1">
+                </label>
+
+                <!-- NIK -->
+                <label for="tnik" class="block mt-4 w-full">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> NIK </span>
+                    <input name="tnik" type="number" value="DATA_NIK" minlength="16" id="tnik" placeholder="NIK (16 digit)" required class="mt-3 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-slate-500 block w-full rounded-md text-sm focus:ring-1">
+                </label>
+            </div>
+            
+            <div class="flex flex-row space-x-6 mt-4">
+                
+                <!-- TEMPAT -->
+                <label for="ttempat" class="block mt-4 w-full">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> Tempat </span>
+                    <input name="ttempat" type="text" value="DATA_TEMPAT" id="ttempat" placeholder="Tempat" required class="mt-3 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-slate-500 block w-full rounded-md text-sm focus:ring-1">
+                </label>
+
+                <!-- TANGGAL LAHIR -->
+                <label for="ttanggal" class="block mt-4 w-full">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> Tanggal Lahir </span>
+                    <input name="ttanggal" type="date" value="DATA_TL" id="ttanggal" placeholder="Volt" required class="mt-3 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-slate-500 block w-full rounded-md text-sm focus:ring-1">
+                </label>
+
+                <!-- GENDER -->
+                <label for="tgender" class="block mt-4 w-full ">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> Gender </span>
+                    <div class="flex flex-row mt-5 space-x-4">
+                        <div class="flex items-center">
+                            <input required id="tgender" name="tgender" type="radio" value="Laki-laki" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" DATA_GENDER_LK>
+                            <label for="tgender_laki" class="ml-2 block text-sm text-gray-800"> Laki-laki </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input required id="tgender" name="tgender" type="radio" value="Perempuan" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" DATA_GENDER_PR>
+                            <label for="tgender_perempuan" class="ml-2 block text-sm text-gray-800"> Perempuan </label>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="flex flex-row space-x-6 mt-4">
+                
+                <!-- EMAIL -->
+                <label for="temail" class="block mt-4 w-full">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> Email </span>
+                    <input name="temail" type="email" value="DATA_EMAIL" id="temail" placeholder="Email" required  class="mt-3 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-slate-500 block w-full rounded-md text-sm focus:ring-1">
+                </label>
+
+                <!-- TELP -->
+                <label for="ttelp" class="block mt-4 w-full">
+                    <span class="after:content-['*'] after:ml-0.3 after:text-red-500 block text-sm font-medium text-slate-700"> Nomor Telepon </span>
+                    <input name="ttelp" type="number" value="DATA_TELP" id="ttelp" placeholder="No Telp" required  class="mt-3 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:ring-slate-500 block w-full rounded-md text-sm focus:ring-1">
+                </label>
+            </div>
+
+
+            <!-- BUTTON -->
+            <div class="flex flex-row w-full pt-6">
+                
+                <div class="bg-white mt-5 w-full">
+                    DATA_TOMBOL
+                </div>
+                
+                <div class="text-left bg-white mt-5 ml-4">
+                    <button name="cancel" type="reset" class="inline-flex justify-center py-2 px-4 border shadow-sm text-sm  rounded-md text-black bg-gray-100 hover:bg-red-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-red-500 duration-300 delay-75"> 
+                        Batal
+                    </button>
+                </div>
+            </div>
+        </form>
+        <!-- END OF FORM -->
+
+    </div>
+    <!-- END OF MAIN SECTION -->
+    
+</body>
+</html>
